@@ -11,5 +11,6 @@ public class SceneController : MonoBehaviour
     public void LoadScene(int idScene)
     {
         SceneManager.LoadScene(idScene);
+        Time.timeScale = 1.0f;
     }
 }

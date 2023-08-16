@@ -6,6 +6,6 @@ public class MobileInputController : IInputController
 {
     public float ProcessInput()
     {
-        return 1;
+        return MobilePlatformController.instance.resultInput;
     }
 }

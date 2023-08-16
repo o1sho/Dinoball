@@ -18,7 +18,6 @@ public class PlayerController : MonoBehaviour
     [Header("BALL")]
     public float minBounceForceBall;
     public float maxBounceForceBall;
-    
 
     private void Awake()
     {
@@ -67,11 +66,11 @@ public class PlayerController : MonoBehaviour
 
             Rigidbody2D ballRb = collision.gameObject.GetComponent<Rigidbody2D>();
 
-            // Вычисление направления отскока мячика в зависимости от точки удара
-            Vector2 bounceDirection = collision.contacts[0].point - (Vector2)transform.position;
+            // Создаем случайный вектор для направления отскока
+            Vector2 randomBounceDirection = new Vector2(Random.Range(-0.4f, 0.4f), Random.Range(0.5f, 1.0f));
 
             // Применение отскока мячика с учетом направления и силы
-            ballRb.velocity = bounceDirection.normalized * Random.Range(minBounceForceBall, maxBounceForceBall);
+            ballRb.velocity = randomBounceDirection.normalized * Random.Range(minBounceForceBall * TimeController.instance.gameSpeed, maxBounceForceBall * TimeController.instance.gameSpeed);
         }
     }
 

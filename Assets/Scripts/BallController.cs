@@ -10,12 +10,19 @@ public class BallController : MonoBehaviour
 
     [SerializeField] private int startForceSpeed;
 
+    [SerializeField] private float correctionGravityScale;
+
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
 
         // «адаем начальное направление движени€
         StartCoroutine(StartMoveBall());
+    }
+
+    private void FixedUpdate()
+    {
+        _rb.gravityScale = TimeController.instance.gameSpeed * correctionGravityScale;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -29,7 +36,7 @@ public class BallController : MonoBehaviour
     private IEnumerator StartMoveBall()
     {
         _rb.constraints = RigidbodyConstraints2D.FreezeAll;
-        Vector2 randomPosition = new Vector3(Random.Range(-3.0f, 3.0f), 0f);
+        Vector2 randomPosition = new Vector3(Random.Range(-2.0f, 2.0f), 0f);
         transform.position = randomPosition;
 
         yield return new WaitForSeconds(timeDelayFall);
