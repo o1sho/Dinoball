@@ -8,6 +8,8 @@ public class BallController : MonoBehaviour
     private Rigidbody2D _rb;
     [SerializeField] private int timeDelayFall;
 
+    [SerializeField] private int startForceSpeed;
+
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -33,7 +35,7 @@ public class BallController : MonoBehaviour
         yield return new WaitForSeconds(timeDelayFall);
 
         _rb.constraints = RigidbodyConstraints2D.None;
-        _rb.velocity = Vector2.up * 3.0f;
+        _rb.velocity = Vector2.up * startForceSpeed;
     }
 
 }
