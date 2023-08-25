@@ -12,10 +12,14 @@ public class BallController : MonoBehaviour
 
     [SerializeField] private float correctionGravityScale;
 
+    [SerializeField] private GameObject trailEffect;
+
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
 
+
+        trailEffect.SetActive(false);
         // «адаем начальное направление движени€
         StartCoroutine(StartMoveBall());
     }
@@ -43,6 +47,7 @@ public class BallController : MonoBehaviour
 
         _rb.constraints = RigidbodyConstraints2D.None;
         _rb.velocity = Vector2.up * startForceSpeed;
+        trailEffect.SetActive(true);
     }
 
 }

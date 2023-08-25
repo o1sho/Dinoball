@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
 
@@ -8,6 +9,9 @@ public class ScoreController : MonoBehaviour
     [SerializeField] private int score;
     [SerializeField] private TextMeshProUGUI textScore;
     [SerializeField] private TextMeshProUGUI textMaxScore;
+
+    [DllImport("__Internal")]
+    private static extern void LeaderBoard(int maxScore);
 
     private void Awake()
     {
@@ -34,6 +38,9 @@ public class ScoreController : MonoBehaviour
         {
             Database.instance.SetMaxScore(score);
             textMaxScore.text = Database.instance.GetMaxScore().ToString();
+#if !UNITY_EDITOR && UNITY_WEBGL
+            LeaderBoard(Database.instance.GetMaxScore());
+#endif
             Database.instance.SaveGameData();
         } 
         
