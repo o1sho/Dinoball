@@ -345,6 +345,7 @@ GameObject:
   - component: {fileID: 222127571}
   - component: {fileID: 222127573}
   - component: {fileID: 222127572}
+  - component: {fileID: 222127574}
   m_Layer: 5
   m_Name: Name bg
   m_TagString: Untagged
@@ -469,6 +470,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 222127570}
   m_CullTransparentMesh: 1
+--- !u!114 &222127574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222127570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa753f9f39c53a44bce902488cf836b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ru: "\u0414\u0418\u041D\u041E\u0411\u041E\u041B"
+  _en: DINOBALL
 --- !u!1 &390418189
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,6 +495,7 @@ GameObject:
   - component: {fileID: 390418190}
   - component: {fileID: 390418192}
   - component: {fileID: 390418191}
+  - component: {fileID: 390418193}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -604,6 +620,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 390418189}
   m_CullTransparentMesh: 1
+--- !u!114 &390418193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390418189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa753f9f39c53a44bce902488cf836b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ru: "\u0414\u0418\u041D\u041E\u0411\u041E\u041B"
+  _en: DINOBALL
 --- !u!1 &468659955
 GameObject:
   m_ObjectHideFlags: 0
@@ -1335,6 +1365,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1785773443}
   - component: {fileID: 1785773442}
+  - component: {fileID: 1785773444}
   m_Layer: 0
   m_Name: Yandex
   m_TagString: Untagged
@@ -1369,6 +1400,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1785773444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785773441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb5122afd88cfe743b16e436c758e702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLanguage: 
 --- !u!1 &1826150742
 GameObject:
   m_ObjectHideFlags: 0
